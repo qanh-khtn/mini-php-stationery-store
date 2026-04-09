@@ -96,11 +96,18 @@ Truy cập:
 
 ## 6. Ảnh chụp màn hình
 
-```md
+**Giao diện Trang chủ:**
 ![Trang chủ](screenshots/home.jpeg)
+
+---
+
+**Giao diện Danh sách sản phẩm:**
 ![Danh sách sản phẩm](screenshots/products.jpeg)
+
+---
+
+**Chức năng Lọc theo danh mục:**
 ![Lọc theo danh mục](screenshots/filter-category.jpeg)
-```
 
 ## 7. Hạn chế hiện tại
 
