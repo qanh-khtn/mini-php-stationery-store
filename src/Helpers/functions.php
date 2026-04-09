@@ -31,3 +31,34 @@ function getAvailableProducts(array $products): array
         return $product['quantity'] > 0;
     }));
 }
+
+// Hàm này để gom các danh mục về 4 nhóm chính để lọc
+function normalizeCategory(string $category): string
+{
+    if (str_contains($category, 'Bút') || str_contains($category, 'bút')) {
+        return 'Bút';
+    }
+
+    if (str_contains($category, 'Sổ') || str_contains($category, 'sổ')) {
+        return 'Sổ';
+    }
+
+    if (str_contains($category, 'Giấy') || str_contains($category, 'giấy')) {
+        return 'Giấy';
+    }
+
+    return 'Dụng cụ';
+}
+
+function getStatusClass(string $status): string
+{
+    if ($status === 'Out of stock') {
+        return 'status-out';
+    }
+
+    if ($status === 'Low stock') {
+        return 'status-low';
+    }
+
+    return 'status-ok';
+}
