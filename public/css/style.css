@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 24px;
+}
+
+/* --------------------------- Thiết lập cho trang chủ --------------------------- */
+body.home-page {
+    --bg-1: #eff9ff;
+    --bg-2: #fff6ea;
+    --ink: #1e2e3f;
+    --muted: #637486;
+    --line: #d5dbe2;
+    --primary: #0b6b8f;
+    --primary-dark: #0a5672;
+    --card: #ffffff;
+
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: radial-gradient(circle at 80% 10%, #ffe8bd 0%, transparent 30%),
+        linear-gradient(120deg, var(--bg-1), var(--bg-2));
+}
+
+.home-page .hero {
+    max-width: 980px;
+    margin: 0 auto;
+    border: 1px solid var(--line);
+    background: var(--card);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 16px 40px rgba(11, 107, 143, 0.14);
+}
+
+.home-page .eyebrow {
+    color: var(--muted);
+    letter-spacing: 1.2px;
+    font-size: 0.78rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.home-page h1 {
+    font-family: "Bookman Old Style", Georgia, serif;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.home-page .lead {
+    color: #2d3c4d;
+    max-width: 700px;
+    margin-bottom: 22px;
+}
+
+.home-page .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.home-page .btn {
+    text-decoration: none;
+    border-radius: 10px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    font-weight: 700;
+}
+
+.home-page .btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.home-page .btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.home-page .btn-ghost {
+    color: var(--ink);
+    border: 1px solid #b7c7d5;
+    background: #f8fbff;
+}
+
+.home-page .stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    list-style: none;
+}
+
+.home-page .stats li {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px;
+    background: #fff;
+}
+
+.home-page .stats .label {
+    display: block;
+    color: var(--muted);
+    font-size: 0.86rem;
+    margin-bottom: 5px;
+}
+
+.home-page .stats .value {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* ------------------------- Thiết lập cho trang sản phẩm ------------------------- */
+body.products-page {
+    --bg-start: #f8f2e8;
+    --bg-end: #d9ebff;
+    --paper: #fffefb;
+    --ink: #1f2d3d;
+    --muted: #687887;
+    --line: #d8dde3;
+    --primary: #135d66;
+    --primary-dark: #0f4a52;
+    --accent: #de6b48;
+    --chip: #ecf7f2;
+    --danger: #b42318;
+    --warn: #b54708;
+    --ok: #067647;
+
+    font-family: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
+    color: var(--ink);
+    background: radial-gradient(circle at 10% 10%, #fff3d6 0%, transparent 35%),
+        linear-gradient(140deg, var(--bg-start), var(--bg-end));
+}
+
+.products-page .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 16px 40px rgba(19, 93, 102, 0.12);
+}
+
+.products-page .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.products-page h1 {
+    font-family: "Bookman Old Style", Georgia, serif;
+    font-size: 2rem;
+    letter-spacing: 0.4px;
+}
+
+.products-page .home-link {
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: white;
+    background: var(--primary);
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.products-page .home-link:hover {
+    background: var(--primary-dark);
+}
+
+.products-page .stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.products-page .stats li {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.products-page .stats .label {
+    display: block;
+    color: var(--muted);
+    font-size: 0.86rem;
+    margin-bottom: 4px;
+}
+
+.products-page .stats .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.products-page .filter-form {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr auto auto;
+    gap: 10px;
+    margin-bottom: 22px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.products-page .filter-form input,
+.products-page .filter-form select,
+.products-page .filter-form button,
+.products-page .btn-reset {
+    min-height: 44px;
+    border-radius: 10px;
+    border: 1px solid #c9d3dd;
+    font-size: 0.95rem;
+    padding: 0 12px;
+}
+
+.products-page .filter-form input:focus,
+.products-page .filter-form select:focus {
+    outline: 2px solid #9dd8d0;
+    border-color: var(--primary);
+}
+
+.products-page .filter-form button {
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.products-page .filter-form button:hover {
+    filter: brightness(0.95);
+}
+
+.products-page .btn-reset {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2f6;
+    color: #243647;
+    font-weight: 700;
+}
+
+.products-page h2 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.products-page .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 14px;
+}
+
+.products-page .product-card {
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(14, 63, 68, 0.08);
+}
+
+.products-page .product-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.products-page .product-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.products-page .chip {
+    background: var(--chip);
+    border: 1px solid #c6ebdb;
+    color: #125a42;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    padding: 4px 9px;
+    white-space: nowrap;
+}
+
+.products-page .product-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.products-page .price {
+    margin: 12px 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.products-page .status {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+}
+
+.products-page .status-out {
+    color: var(--danger);
+    background: #fef3f2;
+    border-color: #fecdca;
+}
+
+.products-page .status-low {
+    color: var(--warn);
+    background: #fffaeb;
+    border-color: #fedf89;
+}
+
+.products-page .status-ok {
+    color: var(--ok);
+    background: #ecfdf3;
+    border-color: #abefc6;
+}
+
+.products-page .no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px dashed #f2c1b6;
+    background: #fff6f4;
+    color: #8c2f1c;
+    font-weight: 700;
+}
+
+@media (max-width: 860px) {
+    .products-page .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .products-page .filter-form {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    body {
+        padding: 12px;
+    }
+
+    .home-page .hero {
+        padding: 18px;
+    }
+
+    .home-page h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-page .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .products-page .container {
+        padding: 16px;
+    }
+
+    .products-page .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .products-page .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .products-page .filter-form {
+        grid-template-columns: 1fr;
+    }
+}
