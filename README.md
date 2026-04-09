@@ -97,9 +97,9 @@ Truy cập:
 ## 6. Ảnh chụp màn hình
 
 ```md
-![Trang chủ](screenshots/home.png)
-![Danh sách sản phẩm](screenshots/products.png)
-![Lọc theo danh mục](screenshots/filter-category.png)
+![Trang chủ](screenshots/home.jpeg)
+![Danh sách sản phẩm](screenshots/products.jpeg)
+![Lọc theo danh mục](screenshots/filter-category.jpeg)
 ```
 
 ## 7. Hạn chế hiện tại
